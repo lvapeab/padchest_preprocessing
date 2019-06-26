@@ -24,7 +24,7 @@ def load_parameters():
     MODEL_NAME = TASK_NAME + '_' + MODEL_TYPE
     MODEL_NAME += EXTRA_NAME
 
-    STORE_PATH = DATA_ROOT_PATH + '/trained_models/' + MODEL_NAME + '/'  # Models and evaluation results will be stored here
+    STORE_PATH = DATA_ROOT_PATH + '/Features/' + MODEL_NAME + '/'  # Models and evaluation results will be stored here
 
     SPLIT_OUTPUT = True
 
