@@ -1,0 +1,8 @@
+future
+numpy
+keras
+keras_applications
+keras_preprocessing
+Multimodal-Keras-Wrapper
+pandas
+sklearn
