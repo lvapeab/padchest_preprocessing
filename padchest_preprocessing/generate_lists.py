@@ -22,7 +22,7 @@ def parse_args():
     parser.add_argument("-sep", "--separator", required=False, default="\t", help="Field separator fields of output files.")
     parser.add_argument("-f", "--fields", required=False, nargs='+', default=['ImageID', 'Report'], help="Fields to store in the output files.")
     parser.add_argument("-s", "--splits", nargs='+', required=False, default=['train', 'val', 'test'], help="Splits to create.")
-    parser.add_argument("-fr", "--fraction", nargs='+', required=False, default=[0.6, 0.2, 0.2], help="Fractions of data to (randomly) assign to a split.")
+    parser.add_argument("-fr", "--fraction", nargs='+', required=False, type=float, default=[0.6, 0.2, 0.2], help="Fractions of data to (randomly) assign to a split.")
     parser.add_argument("-od", "--output-dir", required=False, default='Annotations', help="Output directory.")
     parser.add_argument("-os", "--output-suffix", required=False, default='_list.txt', help="Output suffix for all splits.")
     parser.add_argument("-v", "--verbose", required=False, action='store_true', default=False, help="Be verbose")

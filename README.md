@@ -1,5 +1,8 @@
 # Padchest preprocessing
-Preprocessing stages for the PadChest dataset. We assume that we are working under `/home/user/padchest` directory. Modify this conveniently.
+
+Preprocessing stages for the PadChest dataset. 
+
+We assume that we are working under `/home/user/padchest` directory. Modify this conveniently.
 
 1. Download the dataset described by [Bustos et al., 2019](https://arxiv.org/abs/1901.07441). Request acess from [the bimcv website](http://bimcv.cipf.es/bimcv-projects/padchest).
 
@@ -41,10 +44,10 @@ Preprocessing stages for the PadChest dataset. We assume that we are working und
     3.3. *split_list.txt*:  sample_id \t data_column1 \t ... \t data_columnN.
                             Where data_column are labels (e.g. the reports).
 
-    These lists can be generated with the `generate_lists.py` script (e.g.):
+    These lists can be generated with the `generate_lists.py` script. For example, for using a 96% of the dataset for training (142k samples), a 2% for development (~3k samples) and a 8% for testing (~13k samples), execute: 
     
      ```
-     python padchest_preprocessing/generate_lists.py --root-dir /home/user/DATASETS/padchest/ --labels Annotations/PADCHEST_chest_x_ray_images_labels_160K_01.02.19.csv  -v
+     python padchest_preprocessing/generate_lists.py --root-dir /home/user/DATASETS/padchest/ --labels Annotations/PADCHEST_chest_x_ray_images_labels_160K_01.02.19.csv --fraction 0.9 0.02 0.08 -v
      ```
         
 4. Extract features from images.
