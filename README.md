@@ -44,7 +44,7 @@ Preprocessing stages for the PadChest dataset. We assume that we are working und
     These lists can be generated with the `generate_lists.py` script (e.g.):
     
      ```
-     python ~/smt/software/padchest_preprocessing/padchest_preprocessing/generate_lists.py --root-dir /home/user/DATASETS/padchest/ --labels Annotations/PADCHEST_chest_x_ray_images_labels_160K_01.02.19.csv  -v
+     python padchest_preprocessing/generate_lists.py --root-dir /home/user/DATASETS/padchest/ --labels Annotations/PADCHEST_chest_x_ray_images_labels_160K_01.02.19.csv  -v
      ```
         
 4. Extract features from images.
@@ -55,10 +55,32 @@ Preprocessing stages for the PadChest dataset. We assume that we are working und
     
     4.3. Extract the features!
         
-  ```
-  python feature_extraction/keras/simple_extractor.py
-  ```
+     ```
+     python padchest_preprocessing/eature_extraction/keras/simple_extractor.py
+     ```
+
+
+5. Generate a list pointing to the extracted features: `split_list_features.txt`. Note that we also want to remove the MIME extension from the features, so we call this scrpit with the option  --replace-extension 4:
+
+  
     
+        ```
+        python padchest_preprocessing/generate_feature_lists.py --root-dir /home/lvapeab/DATASETS/padchest --features-dir Features/padchest_NASNetLarge/ --features NASNetLarge --lists-dir Annotations --extension .npy --replace-extension 4
+        ```
+
+        
+        
+6. Retrieve only the captions from split_list.txt:       
+       
+        ```
+        bash padchest_preprocessing/process_captions.sh /home/lvapeab/DATASETS/padchest/Annotations _list.txt captions
+        ```
+
+
+
+7. Profit! This file structure can be directly applied on [interactive-keras-captioning](https://github.com/lvapeab/interactive-keras-captioning).
+
+
 ## TO-DO list.
 
     * Make `feature_extraction/keras/simple_extractor.py` work in batch.
