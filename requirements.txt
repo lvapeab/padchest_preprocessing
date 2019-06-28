@@ -3,6 +3,6 @@ numpy
 keras
 keras_applications
 keras_preprocessing
-Multimodal-Keras-Wrapper
+multimodal-keras-wrapper
 pandas
 sklearn
