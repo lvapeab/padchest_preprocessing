@@ -1,6 +1,6 @@
 # Padchest preprocessing
 
- ![Compatibility](https://img.shields.io/badge/Python-2.7%2F3.6-blue.svg) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/lvapeab/nmt-keras/blob/master/LICENSE)
+ ![Compatibility](https://img.shields.io/badge/Python-3.7-blue.svg) [![Requirements Status](https://requires.io/github/lvapeab/padchest_preprocessing/requirements.svg?branch=master)](https://requires.io/github/lvapeab/padchest_preprocessing/requirements/?branch=master) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/lvapeab/nmt-keras/blob/master/LICENSE)
 
 Preprocessing stages for the [PadChest dataset](https://arxiv.org/abs/1901.07441). 
 
