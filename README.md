@@ -2,7 +2,7 @@
 
  ![Compatibility](https://img.shields.io/badge/Python-2.7%2F3.6-blue.svg) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/lvapeab/nmt-keras/blob/master/LICENSE)
 
-Preprocessing stages for the PadChest dataset. 
+Preprocessing stages for the [PadChest dataset](https://arxiv.org/abs/1901.07441). 
 
 We assume that we are working under `/home/user/padchest` directory. Modify this conveniently.
 
